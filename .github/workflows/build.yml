@@ -1,22 +1,16 @@
-name: Build Package
-
+name: Build
 on:
   pull_request:
     branches: "*"
+  workflow_dispatch:
 jobs:
   build:
-
-    runs-on: windows-latest
-
-    steps:
-
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v2
-        with:
-          dotnet-version: 6.0.x
-
-      - name: Build project
-        run: dotnet build src\jcdcdev.Umbraco.Core\jcdcdev.Umbraco.Core.csproj --configuration Release
+    permissions:
+      contents: write
+    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/build-release-template.yml@main
+    with:
+      project-name: 'jcdcdev.Umbraco.Core'
+      project-path: './src/jcdcdev.Umbraco.Core/jcdcdev.Umbraco.Core.csproj'
+      deploy: false
+    secrets:
+      nuget-api-key: ${{ secrets.NUGET_API_KEY }}
