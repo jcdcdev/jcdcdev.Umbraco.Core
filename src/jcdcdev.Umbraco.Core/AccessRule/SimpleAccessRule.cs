@@ -5,26 +5,6 @@ namespace jcdcdev.Umbraco.Core.AccessRule;
 
 public static class SimpleAccessRule
 {
-    public static IAccessRule GrantByUserGroup(string groupAlias)
-    {
-        return new global::Umbraco.Cms.Core.Dashboards.AccessRule { Type = AccessRuleType.Grant, Value = groupAlias };
-    }
-
-    public static IAccessRule GrantBySection(string section)
-    {
-        return new global::Umbraco.Cms.Core.Dashboards.AccessRule { Type = AccessRuleType.GrantBySection, Value = section };
-    }
-
-    public static IAccessRuleBuilder Allow()
-    {
-        return AccessRuleBuilder.Allow();
-    }
-
-    public static IAccessRule DenyUserGroup(string userGroup)
-    {
-        return AccessRuleBuilder.Deny().UserGroup(userGroup);
-    }
-
     public static IAccessRule AllowEditorGroup => GrantByUserGroup(Constants.Security.EditorGroupAlias);
     public static IAccessRule AllowAdminGroup => GrantByUserGroup(Constants.Security.AdminGroupAlias);
     public static IAccessRule AllowTranslatorGroup => GrantByUserGroup(Constants.Security.TranslatorGroupAlias);
@@ -43,4 +23,12 @@ public static class SimpleAccessRule
     public static IAccessRule DenyAdminGroup => DenyUserGroup(Constants.Security.AdminGroupAlias);
     public static IAccessRule DenyTranslatorGroup => DenyUserGroup(Constants.Security.TranslatorGroupAlias);
     public static IAccessRule DenyWriterGroup => DenyUserGroup(Constants.Security.WriterGroupAlias);
+
+    public static IAccessRule GrantByUserGroup(string groupAlias) => new global::Umbraco.Cms.Core.Dashboards.AccessRule { Type = AccessRuleType.Grant, Value = groupAlias };
+
+    public static IAccessRule GrantBySection(string section) => new global::Umbraco.Cms.Core.Dashboards.AccessRule { Type = AccessRuleType.GrantBySection, Value = section };
+
+    public static IAccessRuleBuilder Allow() => AccessRuleBuilder.Allow();
+
+    public static IAccessRule DenyUserGroup(string userGroup) => AccessRuleBuilder.Deny().UserGroup(userGroup);
 }
