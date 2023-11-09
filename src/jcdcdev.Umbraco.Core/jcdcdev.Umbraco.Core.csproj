@@ -16,7 +16,7 @@
 		<Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © James Carter</Copyright>
 		<PackageProjectUrl>https://github.com/jcdcdev/jcdcdev.Umbraco.Core</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jcdcdev/jcdcdev.Umbraco.Core</RepositoryUrl>
-		<PackageReadmeFile>README_nuget.md</PackageReadmeFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageIcon>images\icon.png</PackageIcon>
@@ -28,13 +28,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="icon.png" Pack="true" Visible="false" PackagePath="images\icon.png"/>
-	</ItemGroup>
-
-	<ItemGroup>
-		<None Include="..\..\docs\README_nuget.md">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
+		<None Include="..\..\docs\icon.png" Pack="true" Visible="false" PackagePath="images\icon.png"/>
+		<None Include="..\..\.github\README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 </Project>
