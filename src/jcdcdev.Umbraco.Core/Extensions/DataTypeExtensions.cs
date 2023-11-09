@@ -58,6 +58,7 @@ public static class DataTypeExtensions
         Constants.PropertyEditors.Aliases.DateTime,
         Constants.PropertyEditors.Aliases.DropDownListFlexible,
         Constants.PropertyEditors.Aliases.Grid,
+        Constants.PropertyEditors.Aliases.BlockGrid,
         Constants.PropertyEditors.Aliases.ImageCropper,
         Constants.PropertyEditors.Aliases.Integer,
         Constants.PropertyEditors.Aliases.Decimal,
