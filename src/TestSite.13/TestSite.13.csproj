@@ -6,7 +6,7 @@
 		<RootNamespace>TestSite.Thirteen</RootNamespace>
 	</PropertyGroup>
 
-	<ItemGroup>
+	<ItemGroup>   
 		<PackageReference Include="Umbraco.Cms" Version="13.0.0"/>
 	</ItemGroup>
 
