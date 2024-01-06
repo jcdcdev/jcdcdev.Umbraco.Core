@@ -12,8 +12,5 @@ jobs:
       project-name: 'jcdcdev.Umbraco.Core'
       project-path: './src/jcdcdev.Umbraco.Core/jcdcdev.Umbraco.Core.csproj'
       deploy: false
-      color-primary: '#5d584d'
-      color-secondary: '#73573c'
-      color-tertiary: '#aba377'
     secrets:
       nuget-api-key: ${{ secrets.NUGET_API_KEY }}

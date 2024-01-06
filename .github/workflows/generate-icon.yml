@@ -1,0 +1,10 @@
+name: Build
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/generate-icon.yml@main
+    with:
+      color-primary: '#5d584d'
+      color-secondary: '#73573c'
+      color-tertiary: '#aba377'
