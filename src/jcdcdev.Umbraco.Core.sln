@@ -52,6 +52,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{5830A8
 		..\.github\workflows\release.yml = ..\.github\workflows\release.yml
 		..\.github\workflows\build.yml = ..\.github\workflows\build.yml
 		..\.github\workflows\generate-icon.yml = ..\.github\workflows\generate-icon.yml
+		..\.github\dependabot.yml = ..\.github\dependabot.yml
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite.11", "TestSite.11\TestSite.11.csproj", "{F08FE559-22F7-4EA3-A389-8892F4E94D97}"
