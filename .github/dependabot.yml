@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+    interval: "daily"
+    time: "08:00"
+    ignore:
+      - dependency-name: "Umbraco.Cms.*"
+      - dependency-name: "Umbraco.Core.*"
+    target-branch: "dev"
