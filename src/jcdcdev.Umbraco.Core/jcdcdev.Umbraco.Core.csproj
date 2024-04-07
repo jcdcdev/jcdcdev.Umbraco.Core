@@ -14,7 +14,7 @@
 		<PackageTags>umbraco</PackageTags>
 		<Authors>James Carter</Authors>
 		<Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © James Carter</Copyright>
-		<PackageProjectUrl>https://github.com/jcdcdev/jcdcdev.Umbraco.Core</PackageProjectUrl>
+		<PackageProjectUrl>https://jcdc.dev/umbraco-packages/core</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/jcdcdev/jcdcdev.Umbraco.Core</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>git</RepositoryType>
@@ -39,6 +39,12 @@
 		<PackageReference Include="Umbraco.Cms.Web.Common" Version="[13.0.0,14.0.0)" />
 		<PackageReference Include="Umbraco.Cms.Web.Website" Version="[13.0.0,14.0.0)" />
 	</ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <PackageVersion>$([System.DateTime]::UtcNow.ToString(`yyyy`).TrimStart(`0`)).$([System.DateTime]::UtcNow.ToString(`MM`).TrimStart(`0`))$([System.DateTime]::UtcNow.ToString(`dd`).TrimStart(`0`)).$([System.DateTime]::UtcNow.ToString(`Hmm`).TrimStart(`0`))-alpha$([System.DateTime]::UtcNow.ToString(`ss`).TrimStart(`.`))</PackageVersion>
+        <Version>$(PackageVersion)</Version>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    </PropertyGroup>
 
 	<ItemGroup>
 		<None Include="..\..\docs\icon.png" Pack="true" Visible="false" PackagePath="images\icon.png"/>
