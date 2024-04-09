@@ -1,15 +1,18 @@
-using Microsoft.Extensions.DependencyInjection;
 using Umbraco.Cms.Core.DependencyInjection;
-using Umbraco.Cms.Core.Manifest;
+using Umbraco.Extensions;
 
 namespace jcdcdev.Umbraco.Core.Composing;
 
-public static class UmbracoBuilderExtensions
+internal static class UmbracoBuilderExtensions
 {
-    public static IUmbracoBuilder AddSimpleManifestFilter(this IUmbracoBuilder builder, string packageName, bool allowPackageTelemetry = true)
+    internal static IUmbracoBuilder AddSimplePackageManifests(this IUmbracoBuilder builder)
     {
-        builder.Services.AddSingleton<SimpleManifestFilter>(x => new SimpleManifestFilter(packageName, allowPackageTelemetry));
-        builder.ManifestFilters().Append<SimpleManifestFilter>();
+        var types = builder.TypeLoader.TypeFinder.FindClassesOfType<SimplePackageManifest>();
+        foreach (var type in types)
+        {
+            builder.ManifestFilters().Append(type);
+        }
+
         return builder;
     }
 }
