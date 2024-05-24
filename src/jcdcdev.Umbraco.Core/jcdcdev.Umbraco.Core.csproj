@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
     <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
         <LangVersion>10</LangVersion>
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -21,52 +22,12 @@
         <PackageIcon>images\icon.png</PackageIcon>
     </PropertyGroup>
 
-    <PropertyGroup Condition="'$(UmbracoVersion)' == ''">
-        <UmbracoVersion>13</UmbracoVersion>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(UmbracoVersion)' == '10'">
-        <TargetFramework>net6.0</TargetFramework>
-        <UmbracoConstants>UMBRACO_10;UMBRACO_13_OR_LESS</UmbracoConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(UmbracoVersion)' == '12'">
-        <TargetFramework>net7.0</TargetFramework>
-        <UmbracoConstants>UMBRACO_12;UMBRACO_13_OR_LESS</UmbracoConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(UmbracoVersion)' &gt;= '13' AND '$(UmbracoVersion)' &lt;= '14'">
-        <TargetFramework>net8.0</TargetFramework>
-        <UmbracoConstants>UMBRACO_13;UMBRACO_13_OR_LESS</UmbracoConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(UmbracoVersion)' &gt;= '14' AND '$(UmbracoVersion)' &lt; '15'">
-        <TargetFramework>net8.0</TargetFramework>
-        <UmbracoConstants>UMBRACO_14;UMBRACO_14_OR_LESS</UmbracoConstants>
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(UmbracoConstants)' != ''">
-        <DefineConstants>$(DefineConstants);$(UmbracoConstants)</DefineConstants>
-    </PropertyGroup>
-
-    <ItemGroup Condition="'$(UmbracoVersion)' == '10'">
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="[10.4.0,11.0.0)"/>
-    </ItemGroup>
-
-    <ItemGroup Condition="'$(UmbracoVersion)' == '12'">
+    <ItemGroup>
         <PackageReference Include="Umbraco.Cms.Web.Common" Version="[12.0.0,13.0.0)"/>
     </ItemGroup>
 
-    <ItemGroup Condition="'$(UmbracoVersion)' == '13'">
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="[13.0.0,14.0.0]"/>
-    </ItemGroup>
-
-    <ItemGroup Condition="'$(UmbracoVersion)' == '14'">
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="14.0.0-rc4"/>
-    </ItemGroup>
-
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <Major>$(UmbracoVersion)</Major>
+        <Major>12</Major>
         <Minor>$([System.DateTime]::UtcNow.ToString(`yyyy`))</Minor>
         <Patch>$([System.DateTime]::UtcNow.ToString(`MMdd`).TrimStart(`0`))</Patch>
         <Suffix>-alpha-$([System.DateTime]::UtcNow.ToString(`Hmm-ss`).TrimStart(`.`))</Suffix>

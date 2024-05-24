@@ -10,9 +10,6 @@ jobs:
       contents: write
     needs:
       - metadata
-    strategy:
-      matrix:
-        umbraco-version: [ 10, 12, 13, 14 ]
     steps:
       - name: Build
         id: build
@@ -20,7 +17,7 @@ jobs:
         with:
           project-name: ${{ needs.metadata.outputs.project-name}}
           project-path: ${{ needs.metadata.outputs.project-path }}
-          umbraco-version: ${{ matrix.umbraco-version }}
+          umbraco-version: 12
       - name: Release
         uses: jcdcdev/jcdcdev.Umbraco.GitHub.Release@main
         with:

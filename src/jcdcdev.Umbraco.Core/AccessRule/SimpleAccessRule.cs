@@ -1,5 +1,4 @@
-﻿#if UMBRACO_13_OR_LESS
-using Umbraco.Cms.Core;
+﻿using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Dashboards;
 
 namespace jcdcdev.Umbraco.Core.AccessRule;
@@ -33,4 +32,3 @@ public static class SimpleAccessRule
 
     public static IAccessRule DenyUserGroup(string userGroup) => AccessRuleBuilder.Deny().UserGroup(userGroup);
 }
-#endif
