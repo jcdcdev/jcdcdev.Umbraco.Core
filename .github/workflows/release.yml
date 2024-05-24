@@ -3,20 +3,23 @@ on:
   workflow_dispatch:
 jobs:
   metadata:
-    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/generate-project-metadata.yml@main
+    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/generate-project-metadata.yml@dev
   build:
-    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/build-template.yml@main    
-    needs: 
+    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/build-template.yml@dev
+    needs:
       - metadata
+    strategy:
+      matrix:
+        umbraco-version: [ 10, 12, 13, 14 ]
     with:
       project-name: ${{ needs.metadata.outputs.project-name}}
       project-path: ${{ needs.metadata.outputs.project-path }}
   release:
-    needs: 
+    needs:
       - build
     permissions:
       contents: write
-    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/release-template.yml@main
+    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/release-template.yml@dev
     with:
       artifact-name: ${{ needs.build.outputs.artifact-name }}
       version: ${{ needs.build.outputs.version }}
