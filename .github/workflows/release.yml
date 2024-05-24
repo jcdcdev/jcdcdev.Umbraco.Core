@@ -4,24 +4,25 @@ on:
 jobs:
   metadata:
     uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/generate-project-metadata.yml@dev
-  build:
-    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/build-template.yml@dev
+  release:
+    runs-on: ubuntu-latest
     needs:
       - metadata
     strategy:
       matrix:
         umbraco-version: [ 10, 12, 13, 14 ]
-    with:
-      project-name: ${{ needs.metadata.outputs.project-name}}
-      project-path: ${{ needs.metadata.outputs.project-path }}
-  release:
-    needs:
-      - build
-    permissions:
-      contents: write
-    uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/release-template.yml@dev
-    with:
-      artifact-name: ${{ needs.build.outputs.artifact-name }}
-      version: ${{ needs.build.outputs.version }}
-    secrets:
-      nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+    steps:
+      - name: Build
+        id: build
+        uses: jcdcdev/jcdcdev.Umbraco.Github.Build@main
+        with:
+          project-name: ${{ needs.metadata.outputs.project-name}}
+          project-path: ${{ needs.metadata.outputs.project-path }}
+          umbraco-version: ${{ matrix.umbraco-version }}
+#      - name: Release
+#        uses: jcdcdev/jcdcdev.Github.Deploy@main
+#        with:
+#          artifact-name: ${{ steps.build.outputs.artifact-name }}
+#          version: ${{ steps.build.outputs.version }}
+#        secrets:
+#            nuget-api-key: ${{ secrets.NUGET_API_KEY }}
