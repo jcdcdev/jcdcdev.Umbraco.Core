@@ -8,12 +8,10 @@ public static class DataTypeExtensions
 {
     private static readonly Guid[] Guids =
     {
-#if UMBRACO_13_OR_LESS
         // Legacy editors
         Constants.DataTypes.Guids.MediaPickerGuid,
         Constants.DataTypes.Guids.MultipleMediaPickerGuid,
         Constants.DataTypes.Guids.ListViewMembersGuid,
-#endif
         Constants.DataTypes.Guids.ContentPickerGuid,
         Constants.DataTypes.Guids.MemberPickerGuid,
         Constants.DataTypes.Guids.MediaPicker3Guid,
@@ -87,11 +85,7 @@ public static class DataTypeExtensions
         Constants.PropertyEditors.Aliases.NestedContent,
         Constants.PropertyEditors.Aliases.MultiUrlPicker,
         Constants.PropertyEditors.Aliases.TinyMce,
-#if UMBRACO_14
-        Constants.PropertyEditors.Aliases.RichText,
-#else
         Constants.PropertyEditors.Aliases.MediaPicker,
-#endif
     };
 
     public static bool IsUmbracoEditor(this IDataType dataType) => Aliases.InvariantContains(dataType.EditorAlias);
