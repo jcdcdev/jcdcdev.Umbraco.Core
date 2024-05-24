@@ -8,11 +8,11 @@
 
     <ItemGroup>
         <PackageReference Include="Umbraco.Cms" Version="14.0.0-rc4"/>
-        <PackageReference Include="uSync" Version="14.0.0-rc4" />
+        <PackageReference Include="uSync" Version="14.0.0-rc4"/>
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="jcdcdev.Umbraco.Core" Version="14.*-*" />
+        <ProjectReference Include="../jcdcdev.Umbraco.Core/jcdcdev.Umbraco.Core.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -20,7 +20,7 @@
         <PackageReference Include="Microsoft.ICU.ICU4C.Runtime" Version="72.1.0.3"/>
         <RuntimeHostConfigurationOption Include="System.Globalization.AppLocalIcu" Value="72.1.0.3" Condition="$(RuntimeIdentifier.StartsWith('linux')) or $(RuntimeIdentifier.StartsWith('win')) or ('$(RuntimeIdentifier)' == '' and !$([MSBuild]::IsOSPlatform('osx')))"/>
     </ItemGroup>
-    
+
     <PropertyGroup>
         <!-- Razor files are needed for the backoffice to work correctly -->
         <CopyRazorGenerateFilesToPublishDirectory>true</CopyRazorGenerateFilesToPublishDirectory>
