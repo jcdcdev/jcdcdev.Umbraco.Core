@@ -8,10 +8,14 @@ public static class DataTypeExtensions
 {
     private static readonly Guid[] Guids =
     {
-        Constants.DataTypes.Guids.ContentPickerGuid,
-        Constants.DataTypes.Guids.MemberPickerGuid,
+#if UMBRACO_13_OR_LESS
+        // Legacy editors
         Constants.DataTypes.Guids.MediaPickerGuid,
         Constants.DataTypes.Guids.MultipleMediaPickerGuid,
+        Constants.DataTypes.Guids.ListViewMembersGuid,
+#endif
+        Constants.DataTypes.Guids.ContentPickerGuid,
+        Constants.DataTypes.Guids.MemberPickerGuid,
         Constants.DataTypes.Guids.MediaPicker3Guid,
         Constants.DataTypes.Guids.MediaPicker3MultipleGuid,
         Constants.DataTypes.Guids.MediaPicker3SingleImageGuid,
@@ -22,7 +26,6 @@ public static class DataTypeExtensions
         Constants.DataTypes.Guids.TagsGuid,
         Constants.DataTypes.Guids.ListViewContentGuid,
         Constants.DataTypes.Guids.ListViewMediaGuid,
-        Constants.DataTypes.Guids.ListViewMembersGuid,
         Constants.DataTypes.Guids.DatePickerWithTimeGuid,
         Constants.DataTypes.Guids.ApprovedColorGuid,
         Constants.DataTypes.Guids.DropdownMultipleGuid,
@@ -63,7 +66,6 @@ public static class DataTypeExtensions
         Constants.PropertyEditors.Aliases.Integer,
         Constants.PropertyEditors.Aliases.Decimal,
         Constants.PropertyEditors.Aliases.ListView,
-        Constants.PropertyEditors.Aliases.MediaPicker,
         Constants.PropertyEditors.Aliases.MediaPicker3,
         Constants.PropertyEditors.Aliases.MultipleMediaPicker,
         Constants.PropertyEditors.Aliases.MemberPicker,
@@ -77,14 +79,19 @@ public static class DataTypeExtensions
         Constants.PropertyEditors.Aliases.Tags,
         Constants.PropertyEditors.Aliases.TextBox,
         Constants.PropertyEditors.Aliases.TextArea,
-        Constants.PropertyEditors.Aliases.TinyMce,
         Constants.PropertyEditors.Aliases.Boolean,
         Constants.PropertyEditors.Aliases.MarkdownEditor,
         Constants.PropertyEditors.Aliases.UserPicker,
         Constants.PropertyEditors.Aliases.UploadField,
         Constants.PropertyEditors.Aliases.EmailAddress,
         Constants.PropertyEditors.Aliases.NestedContent,
-        Constants.PropertyEditors.Aliases.MultiUrlPicker
+        Constants.PropertyEditors.Aliases.MultiUrlPicker,
+        Constants.PropertyEditors.Aliases.TinyMce,
+#if UMBRACO_14
+        Constants.PropertyEditors.Aliases.RichText,
+#else
+        Constants.PropertyEditors.Aliases.MediaPicker,
+#endif
     };
 
     public static bool IsUmbracoEditor(this IDataType dataType) => Aliases.InvariantContains(dataType.EditorAlias);

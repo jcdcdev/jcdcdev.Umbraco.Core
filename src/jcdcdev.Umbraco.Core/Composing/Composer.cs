@@ -7,6 +7,8 @@ internal class Composer : IComposer
 {
     public void Compose(IUmbracoBuilder builder)
     {
+        #if UMBRACO_13_OR_LESS
         builder.AddSimplePackageManifests();
+        #endif
     }
 }

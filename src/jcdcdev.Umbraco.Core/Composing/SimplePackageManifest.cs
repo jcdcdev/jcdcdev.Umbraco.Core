@@ -1,3 +1,4 @@
+#if UMBRACO_13_OR_LESS
 using jcdcdev.Umbraco.Core.Extensions;
 using Umbraco.Cms.Core.Manifest;
 
@@ -21,3 +22,4 @@ public abstract class SimplePackageManifest : IManifestFilter
         });
     }
 }
+#endif

@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\jcdcdev.Umbraco.Core\jcdcdev.Umbraco.Core.csproj"/>
+        <PackageReference Include="jcdcdev.Umbraco.Core" Version="13.*-*"/>
     </ItemGroup>
 
     <PropertyGroup>

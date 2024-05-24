@@ -1,7 +1,6 @@
 <Project>
-   <PropertyGroup>
-       <NuGetAuditMode>all</NuGetAuditMode>
-       <NuGetAuditLevel>high</NuGetAuditLevel>
-       <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
-   </PropertyGroup>
+    <PropertyGroup>
+        <NuGetAuditMode>all</NuGetAuditMode>
+        <NuGetAuditLevel>high</NuGetAuditLevel>
+    </PropertyGroup>
 </Project>

@@ -1,4 +1,5 @@
-﻿using Umbraco.Cms.Core.Dashboards;
+﻿#if UMBRACO_13_OR_LESS
+using Umbraco.Cms.Core.Dashboards;
 
 namespace jcdcdev.Umbraco.Core.AccessRule;
 
@@ -15,3 +16,4 @@ public interface IAccessRuleSectionBuilder
 public interface IAccessRuleBuilder : IAccessRuleUserGroupBuilder
 {
 }
+#endif

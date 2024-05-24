@@ -4,6 +4,7 @@ namespace jcdcdev.Umbraco.Core.Extensions;
 
 public static class ContentItemDisplayExtensions
 {
+#if UMBRACO_13_OR_LESS
     public static IEnumerable<ContentPropertyDisplay> GetProperties(this ContentItemDisplay contentItemDisplay, string propertyEditorAlias)
     {
         return contentItemDisplay.Variants.SelectMany(x => x.Tabs.GetProperties(propertyEditorAlias));
@@ -13,4 +14,5 @@ public static class ContentItemDisplayExtensions
     {
         return contentItemDisplay.SelectMany(y => y.Properties?.Where(x => x.Editor == propertyEditorAlias) ?? Array.Empty<ContentPropertyDisplay>());
     }
+#endif
 }
