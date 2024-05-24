@@ -9,7 +9,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\.github\README.md = ..\.github\README.md
 		Directory.Build.props = Directory.Build.props
 		.editorconfig = .editorconfig
-		build.ps1 = build.ps1
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "jcdcdev.Umbraco.Core", "jcdcdev.Umbraco.Core\jcdcdev.Umbraco.Core.csproj", "{EC825C30-A30B-4ABF-AD64-FCA92C9EA75C}"
@@ -30,18 +29,6 @@ Global
 		{989D710F-EC50-4EFF-AE9D-26A68694FDB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{989D710F-EC50-4EFF-AE9D-26A68694FDB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{989D710F-EC50-4EFF-AE9D-26A68694FDB5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{843A2979-DB5B-4824-B730-29F8CD6F1243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{843A2979-DB5B-4824-B730-29F8CD6F1243}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{843A2979-DB5B-4824-B730-29F8CD6F1243}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{843A2979-DB5B-4824-B730-29F8CD6F1243}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6852CB9E-0766-4852-ADBB-C5855591EEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6852CB9E-0766-4852-ADBB-C5855591EEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6852CB9E-0766-4852-ADBB-C5855591EEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6852CB9E-0766-4852-ADBB-C5855591EEDE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6969F9CC-0B87-4EDD-851E-A62D3F77F859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6969F9CC-0B87-4EDD-851E-A62D3F77F859}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6969F9CC-0B87-4EDD-851E-A62D3F77F859}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6969F9CC-0B87-4EDD-851E-A62D3F77F859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,10 +44,4 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{5830A8
 		..\.github\dependabot.yml = ..\.github\dependabot.yml
 		..\.github\workflows\update-releases.yml = ..\.github\workflows\update-releases.yml
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite.12", "TestSite.12\TestSite.12.csproj", "{843A2979-DB5B-4824-B730-29F8CD6F1243}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite.13", "TestSite.13\TestSite.13.csproj", "{6852CB9E-0766-4852-ADBB-C5855591EEDE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSite.14", "TestSite.14\TestSite.14.csproj", "{6969F9CC-0B87-4EDD-851E-A62D3F77F859}"
 EndProject

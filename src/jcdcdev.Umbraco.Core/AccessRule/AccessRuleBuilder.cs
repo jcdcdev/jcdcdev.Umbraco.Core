@@ -1,5 +1,4 @@
-﻿#if UMBRACO_13_OR_LESS
-using Umbraco.Cms.Core.Dashboards;
+﻿using Umbraco.Cms.Core.Dashboards;
 
 namespace jcdcdev.Umbraco.Core.AccessRule;
 
@@ -32,4 +31,3 @@ public class AccessRuleBuilder : IAccessRuleBuilder
         return _rule;
     }
 }
-#endif

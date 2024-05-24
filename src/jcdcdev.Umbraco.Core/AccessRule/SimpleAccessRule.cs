@@ -1,5 +1,4 @@
-﻿#if UMBRACO_13_OR_LESS
-using Umbraco.Cms.Core;
+﻿using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Dashboards;
 
 namespace jcdcdev.Umbraco.Core.AccessRule;
@@ -28,9 +27,7 @@ public static class SimpleAccessRule
     public static IAccessRule GrantByUserGroup(string groupAlias) => new global::Umbraco.Cms.Core.Dashboards.AccessRule { Type = AccessRuleType.Grant, Value = groupAlias };
 
     public static IAccessRule GrantBySection(string section) => new global::Umbraco.Cms.Core.Dashboards.AccessRule { Type = AccessRuleType.GrantBySection, Value = section };
-
     public static IAccessRuleBuilder Allow() => AccessRuleBuilder.Allow();
 
     public static IAccessRule DenyUserGroup(string userGroup) => AccessRuleBuilder.Deny().UserGroup(userGroup);
 }
-#endif
