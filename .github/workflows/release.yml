@@ -6,6 +6,8 @@ jobs:
     uses: jcdcdev/jcdcdev.Github.UmbracoSimpleDeploy/.github/workflows/generate-project-metadata.yml@dev
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     needs:
       - metadata
     strategy:
@@ -14,15 +16,15 @@ jobs:
     steps:
       - name: Build
         id: build
-        uses: jcdcdev/jcdcdev.Umbraco.Github.Build@main
+        uses: jcdcdev/jcdcdev.Umbraco.GitHub.Build@main
         with:
           project-name: ${{ needs.metadata.outputs.project-name}}
           project-path: ${{ needs.metadata.outputs.project-path }}
           umbraco-version: ${{ matrix.umbraco-version }}
-#      - name: Release
-#        uses: jcdcdev/jcdcdev.Github.Deploy@main
-#        with:
-#          artifact-name: ${{ steps.build.outputs.artifact-name }}
-#          version: ${{ steps.build.outputs.version }}
-#        secrets:
-#            nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+      - name: Release
+        uses: jcdcdev/jcdcdev.Umbraco.GitHub.Release@main
+        with:
+          artifact-name: ${{ steps.build.outputs.artifact-name }}
+          version: ${{ steps.build.outputs.version }}
+          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
