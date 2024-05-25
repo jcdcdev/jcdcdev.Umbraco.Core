@@ -1,9 +1,8 @@
 # jcdcdev.Umbraco.Core
 
 [![Umbraco Version](https://img.shields.io/badge/Umbraco-10.4+-%233544B1?style=flat&logo=umbraco)](https://umbraco.com/products/umbraco-cms/)
-[![NuGet](https://img.shields.io/nuget/vpre/jcdcdev.Umbraco.Core?color=0273B3)](https://www.nuget.org/packages/jcdcdev.Umbraco.Core)
-[![GitHub license](https://img.shields.io/github/license/jcdcdev/jcdcdev.Umbraco.Core?color=8AB803)](https://github.com/jcdcdev/jcdcdev.Umbraco.Core/blob/main/LICENSE)
-[![Downloads](https://img.shields.io/nuget/dt/jcdcdev.Umbraco.Core?color=cc9900)](https://www.nuget.org/packages/jcdcdev.Umbraco.Core/)
+[![GitHub license](https://img.shields.io/github/license/jcdcdev/jcdcdev.Umbraco.Core?color=8AB803&label=License)](https://github.com/jcdcdev/jcdcdev.Umbraco.Core/blob/main/LICENSE)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/jcdcdev.Umbraco.Core?color=cc9900&label=NuGet)](https://www.nuget.org/packages/jcdcdev.Umbraco.Core/)
 
 Core functionality used by my packages and projects
 

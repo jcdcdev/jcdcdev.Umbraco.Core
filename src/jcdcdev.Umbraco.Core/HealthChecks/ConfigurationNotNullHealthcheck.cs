@@ -1,4 +1,3 @@
-using jcdcdev.Umbraco.Core.AccessRule;
 using Microsoft.Extensions.Options;
 using Umbraco.Cms.Core.HealthChecks;
 using Umbraco.Cms.Core.HealthChecks.Checks;
@@ -34,7 +33,6 @@ public abstract class ConfigurationNotNullHealthcheck<T> : AbstractSettingsCheck
     /// </summary>
     protected ConfigurationNotNullHealthcheck(ILocalizedTextService textService, IOptions<T> options) : base(textService)
     {
-        var x = SimpleAccessRule.GrantBySection("mySection");
         _options = options;
     }
 
