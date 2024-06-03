@@ -5,7 +5,7 @@ using Umbraco.Cms.Core.Web;
 using Umbraco.Cms.Web.Common;
 using Umbraco.Cms.Web.Common.Controllers;
 
-namespace jcdcdev.Umbraco.Core.Extensions;
+namespace jcdcdev.Umbraco.Core.Web;
 
 public abstract class RenderController<T> : RenderController where T : class, IPublishedContent
 {
