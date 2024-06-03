@@ -7,6 +7,5 @@ internal class Composer : IComposer
 {
     public void Compose(IUmbracoBuilder builder)
     {
-        builder.AddSimplePackageManifests();
     }
 }

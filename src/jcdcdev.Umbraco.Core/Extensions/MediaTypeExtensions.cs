@@ -18,7 +18,7 @@ public static class MediaTypeExtensions
         Constants.Conventions.MediaTypes.VideoAlias,
         Constants.Conventions.MediaTypes.AudioAlias,
         Constants.Conventions.MediaTypes.ArticleAlias,
-        Constants.Conventions.MediaTypes.VectorGraphicsAlias
+        Constants.Conventions.MediaTypes.VectorGraphicsAlias,
     };
 
     public static bool IsInternal(this IMediaType mediaType) => MediaTypes.InvariantContains(mediaType.Alias);
