@@ -2,6 +2,6 @@
 
 public class ConditionManifest
 {
-    public string Alias { get; set; }
-    public string Match { get; set; }
+    public required string Alias { get; set; }
+    public required string Match { get; set; }
 }
