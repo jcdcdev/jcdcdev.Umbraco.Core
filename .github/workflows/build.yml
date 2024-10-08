@@ -11,4 +11,5 @@ jobs:
         with:
           project-name: jcdcdev.Umbraco.Core
           project-path: src/jcdcdev.Umbraco.Core/jcdcdev.Umbraco.Core.csproj
-          umbraco-version: 14
+          umbraco-version: 15
+          dotnet-version: "9"
