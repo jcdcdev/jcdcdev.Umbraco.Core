@@ -65,6 +65,6 @@ public class SimpleWorkspaceViewPackageManifestReader() : IPackageManifestReader
         extensions.Add(dashboardManifest);
         extensions.Add(workspaceViewManifest);
         packageManifest.Extensions = extensions.OfType<object>().ToArray();
-        return new[] { packageManifest };
+        return [packageManifest];
     }
 }

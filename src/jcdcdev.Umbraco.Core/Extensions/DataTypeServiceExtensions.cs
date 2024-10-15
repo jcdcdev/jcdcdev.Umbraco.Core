@@ -6,8 +6,10 @@ namespace jcdcdev.Umbraco.Core.Extensions;
 
 public static class DataTypeServiceExtensions
 {
-    public static IEnumerable<EntityContainer> GetAllContainers(this IDataTypeService dataTypeService) => dataTypeService.GetContainers(Array.Empty<int>());
+    [Obsolete("Please use IDataTypeContainerService for all data type container operations. Will be removed in V15.")]
+    public static IEnumerable<EntityContainer> GetAllContainers(this IDataTypeService dataTypeService) => dataTypeService.GetContainers([]);
 
+    [Obsolete("Please use IDataTypeContainerService for all data type container operations. Will be removed in V15.")]
     public static void DeleteAllEmptyContainers(this IDataTypeService dataTypeService)
     {
         var dataTypes = dataTypeService.GetAll();
@@ -27,6 +29,7 @@ public static class DataTypeServiceExtensions
         }
     }
 
+    [Obsolete("Please use IDataTypeContainerService for all data type container operations. Will be removed in V15.")]
     public static EntityContainer GetOrCreateFolder(
         this IDataTypeService dataTypeService,
         string folder,

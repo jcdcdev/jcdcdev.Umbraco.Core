@@ -7,7 +7,7 @@ namespace jcdcdev.Umbraco.Core.Extensions;
 public static class DataTypeExtensions
 {
     private static readonly Guid[] Guids =
-    {
+    [
         // Legacy editors
         Constants.DataTypes.Guids.ContentPickerGuid,
         Constants.DataTypes.Guids.MemberPickerGuid,
@@ -44,10 +44,10 @@ public static class DataTypeExtensions
         Constants.DataTypes.Guids.LabelDateTimeGuid,
         Constants.DataTypes.Guids.LabelTimeGuid,
         Constants.DataTypes.Guids.LabelDecimalGuid
-    };
+    ];
 
     private static readonly string[] Aliases =
-    {
+    [
         Constants.PropertyEditors.Aliases.BlockList,
         Constants.PropertyEditors.Aliases.CheckBoxList,
         Constants.PropertyEditors.Aliases.ColorPicker,
@@ -83,7 +83,13 @@ public static class DataTypeExtensions
         Constants.PropertyEditors.Aliases.MultiUrlPicker,
         Constants.PropertyEditors.Aliases.TinyMce,
         Constants.PropertyEditors.Aliases.RichText,
-    };
+        Constants.PropertyEditors.Aliases.PlainString,
+        Constants.PropertyEditors.Aliases.PlainJson,
+        Constants.PropertyEditors.Aliases.PlainDecimal,
+        Constants.PropertyEditors.Aliases.PlainInteger,
+        Constants.PropertyEditors.Aliases.PlainDateTime,
+        Constants.PropertyEditors.Aliases.PlainTime
+    ];
 
     public static bool IsUmbracoEditor(this IDataType dataType) => Aliases.InvariantContains(dataType.EditorAlias);
 
