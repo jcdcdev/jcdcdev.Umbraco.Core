@@ -23,7 +23,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="[15.0.0-rc1,15.0.0-rc999)"/>
+        <PackageReference Include="Umbraco.Cms.Web.Common" Version="15.0.0-rc2"/>
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
