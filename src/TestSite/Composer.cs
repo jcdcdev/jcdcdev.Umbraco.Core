@@ -1,7 +1,7 @@
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Infrastructure.Manifest;
 
-namespace TestSite.Fourteen;
+namespace TestSite;
 
 public class Composer : IComposer
 {

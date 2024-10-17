@@ -2,7 +2,6 @@
 
 public class DashboardManifest : IManifest
 {
-    public string Type => "dashboard";
     public required string Alias { get; set; }
     public required string Name { get; set; }
     public string? ElementName { get; set; }
@@ -10,6 +9,7 @@ public class DashboardManifest : IManifest
     public int Weight { get; set; }
     public MetaManifest? Meta { get; set; }
     public ConditionManifest[]? Conditions { get; set; }
+    public string Type => "dashboard";
 
     public class MetaManifest
     {

@@ -3,7 +3,7 @@ using jcdcdev.Umbraco.Core.Web.Models.Manifests;
 using Umbraco.Cms.Core.Manifest;
 using Umbraco.Cms.Infrastructure.Manifest;
 
-namespace TestSite.Fourteen;
+namespace TestSite;
 
 public class SimpleWorkspaceViewPackageManifestReader() : IPackageManifestReader
 {
@@ -65,6 +65,6 @@ public class SimpleWorkspaceViewPackageManifestReader() : IPackageManifestReader
         extensions.Add(dashboardManifest);
         extensions.Add(workspaceViewManifest);
         packageManifest.Extensions = extensions.OfType<object>().ToArray();
-        return new[] { packageManifest };
+        return [packageManifest];
     }
 }

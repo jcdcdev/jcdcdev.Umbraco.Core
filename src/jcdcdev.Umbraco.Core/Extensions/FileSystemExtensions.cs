@@ -26,7 +26,7 @@ public static class FileSystemExtensions
         return files;
     }
 
-    public static void CreateDirectoryIfNotExists(this IFileSystem fileSystem, string? path)
+    public static void CreateDirectoryIfNotExists(this IFileSystem fileSystem, string path)
     {
         if (!fileSystem.CanAddPhysical)
         {
@@ -39,7 +39,7 @@ public static class FileSystemExtensions
         }
     }
 
-    public static void CreateOrEmptyIfExists(this IFileSystem fileSystem, string? backupDir)
+    public static void CreateOrEmptyIfExists(this IFileSystem fileSystem, string backupDir)
     {
         if (!fileSystem.CanAddPhysical)
         {
@@ -50,7 +50,7 @@ public static class FileSystemExtensions
         fileSystem.CreateFolder(backupDir);
     }
 
-    public static void DeleteDirectoryIfExists(this IFileSystem fileSystem, string? path, bool recursive = false)
+    public static void DeleteDirectoryIfExists(this IFileSystem fileSystem, string path, bool recursive = false)
     {
         if (!fileSystem.DirectoryExists(path))
         {

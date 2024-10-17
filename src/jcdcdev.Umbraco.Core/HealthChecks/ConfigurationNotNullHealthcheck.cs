@@ -18,8 +18,8 @@ namespace jcdcdev.Umbraco.Core.HealthChecks;
 /// </summary>
 public abstract class ConfigurationNotNullHealthcheck<T> : AbstractSettingsCheck where T : class
 {
-    private readonly string _prefix = typeof(T).Name.ToFirstLowerInvariant();
     private readonly IOptions<T> _options;
+    private readonly string _prefix = typeof(T).Name.ToFirstLowerInvariant();
 
     /// <summary>
     ///     Ensure a lang file exists with the area "healthcheck" and keys:<br />
@@ -38,12 +38,12 @@ public abstract class ConfigurationNotNullHealthcheck<T> : AbstractSettingsCheck
 
     protected T Options => _options.Value;
     public override ValueComparisonType ValueComparisonType => ValueComparisonType.ShouldNotEqual;
-    public override string CheckSuccessMessage => LocalizedTextService.Localize("healthcheck", $"{_prefix}CheckSuccessMessage", new[] { CurrentValueDisplay, ItemPaths });
+    public override string CheckSuccessMessage => LocalizedTextService.Localize("healthcheck", $"{_prefix}CheckSuccessMessage", [CurrentValueDisplay, ItemPaths]);
 
     public override string CheckErrorMessage =>
         Recommended.IsNullOrWhiteSpace()
-            ? LocalizedTextService.Localize("healthcheck", $"{_prefix}CheckErrorMessage", new[] { CurrentValueDisplay, ItemPaths })
-            : LocalizedTextService.Localize("healthcheck", $"{_prefix}CheckErrorMessageWithRecommendedValue", new[] { CurrentValueDisplay, ItemPaths, Recommended });
+            ? LocalizedTextService.Localize("healthcheck", $"{_prefix}CheckErrorMessage", [CurrentValueDisplay, ItemPaths])
+            : LocalizedTextService.Localize("healthcheck", $"{_prefix}CheckErrorMessageWithRecommendedValue", [CurrentValueDisplay, ItemPaths, Recommended]);
 
     private string CurrentValueDisplay => CurrentValue.IsNullOrWhiteSpace() ? "<em>undefined</em>" : $"<code>{CurrentValue}</code>";
     private string ItemPaths => $"<code>{ItemPath}</code> | <code>{ItemPath.Replace(":", "__")}</code>";
