@@ -7,7 +7,7 @@ namespace jcdcdev.Umbraco.Core.Extensions;
 public static class ContentTypeBaseServiceExtensions
 {
     public static IEnumerable<EntityContainer> GetAllContainers<T>(this IContentTypeBaseService<T> service) where T : IContentTypeComposition =>
-        service.GetContainers(Array.Empty<int>());
+        service.GetContainers([]);
 
     public static void DeleteAllEmptyContainers<T>(this IContentTypeBaseService<T> service) where T : IContentTypeComposition
     {
