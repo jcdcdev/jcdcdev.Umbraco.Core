@@ -17,16 +17,16 @@
       },
       "Umbraco.Cms": {
         "type": "Direct",
-        "requested": "[15.0.0-rc2, )",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "O/nWjgM0muZcRNjW3ON+ULTPThQUJUKIZTja5MjWh+NwBtqy5n5demXVtNUtZylFYiPgOS9FUDu9HTzgKnroIw==",
+        "requested": "[15.0.0-rc3, )",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "efAb0/v+qeb5e5C7PKBoMU+Ktafah8xbOWWm5r0e2W6Xb+E8s0CXElbrlU1WgUew6FcorpHeprBkqqUjYFPPjw==",
         "dependencies": {
-          "Umbraco.Cms.Imaging.ImageSharp": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Persistence.EFCore.SqlServer": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Persistence.EFCore.Sqlite": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Persistence.SqlServer": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Persistence.Sqlite": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Targets": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Imaging.ImageSharp": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Persistence.EFCore.SqlServer": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Persistence.EFCore.Sqlite": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Persistence.SqlServer": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Persistence.Sqlite": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Targets": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Asp.Versioning.Abstractions": {
@@ -63,30 +63,29 @@
       },
       "Azure.Core": {
         "type": "Transitive",
-        "resolved": "1.40.0",
-        "contentHash": "eOx6wk3kQ3SCnoAj7IytAu/d99l07PdarmUc+RmMkVOTkcQ3s+UQEaGzMyEqC2Ua4SKnOW4Xw/klLeB5V2PiSA==",
+        "resolved": "1.44.1",
+        "contentHash": "YyznXLQZCregzHvioip07/BkzjuWNXogJEVz9T5W6TwjNr17ax41YGzYMptlo2G10oLCuVPoyva62y0SIRDixg==",
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.1.1",
-          "System.ClientModel": "1.0.0",
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.ClientModel": "1.1.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1",
-          "System.Memory.Data": "1.0.2",
+          "System.Memory.Data": "6.0.0",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Text.Encodings.Web": "4.7.2",
-          "System.Text.Json": "4.7.2",
+          "System.Text.Encodings.Web": "6.0.0",
+          "System.Text.Json": "6.0.10",
           "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
       "Azure.Identity": {
         "type": "Transitive",
-        "resolved": "1.12.1",
-        "contentHash": "7j7ksn+1X2swW2DDDEEywK5wxuYImzMIXnunZTB83E3mwzBbyHOob1hO1wOG5fMZYTGe/+9gyc/qurcozaSm1A==",
+        "resolved": "1.13.1",
+        "contentHash": "4eeK9XztjTmvA4WN+qAvlUCSxSv45+LqTMeC8XT2giGGZHKthTMU2IuXcHjAOf5VLH3wE3Bo6EwhIcJxVB8RmQ==",
         "dependencies": {
-          "Azure.Core": "1.40.0",
-          "Microsoft.Identity.Client": "4.65.0",
-          "Microsoft.Identity.Client.Extensions.Msal": "4.65.0",
-          "System.Memory": "4.5.4",
-          "System.Security.Cryptography.ProtectedData": "4.7.0",
-          "System.Text.Json": "4.7.2",
+          "Azure.Core": "1.44.1",
+          "Microsoft.Identity.Client": "4.66.1",
+          "Microsoft.Identity.Client.Extensions.Msal": "4.66.1",
+          "System.Memory": "4.5.5",
+          "System.Text.Json": "6.0.10",
           "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
@@ -409,8 +408,8 @@
       },
       "Microsoft.Bcl.AsyncInterfaces": {
         "type": "Transitive",
-        "resolved": "1.1.1",
-        "contentHash": "yuvf07qFWFqtK3P/MRkEKLhn5r2UbSpVueRziSqj0yJQIKFwG1pq9mOayK3zE5qZCTs0CbrwL9M6R8VwqyGy2w=="
+        "resolved": "6.0.0",
+        "contentHash": "UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg=="
       },
       "Microsoft.Bcl.TimeProvider": {
         "type": "Transitive",
@@ -968,8 +967,8 @@
       },
       "Microsoft.Identity.Client": {
         "type": "Transitive",
-        "resolved": "4.65.0",
-        "contentHash": "RV35ZcJ5/P7n+Zu6J3wmtiDdK6MW5h6EpZ0ojjB9sMwNhGHEJCv829cb3kZ4PZ664llYFv8sbUITWWGvBTqv0Q==",
+        "resolved": "4.66.1",
+        "contentHash": "mE+m3pZ7zSKocSubKXxwZcUrCzLflC86IdLxrVjS8tialy0b1L+aECBqRBC/ykcPlB4y7skg49TaTiA+O2UfDw==",
         "dependencies": {
           "Microsoft.IdentityModel.Abstractions": "6.35.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1"
@@ -977,10 +976,10 @@
       },
       "Microsoft.Identity.Client.Extensions.Msal": {
         "type": "Transitive",
-        "resolved": "4.65.0",
-        "contentHash": "JIOBFMAyVSqGWP4dNoST+A9BRJMGC8m73BNbR1oKA8nUjGyR8Fd4eOOME/VDrd26I5JWU4RtmWqpt20lpp2r5w==",
+        "resolved": "4.66.1",
+        "contentHash": "osgt1J9Rve3LO7wXqpWoFx9UFjl0oeqoUMK/xEru7dvafQ28RgV1A17CoCGCCRSUbgDQ4Arg5FgGK2lQ3lXR4A==",
         "dependencies": {
-          "Microsoft.Identity.Client": "4.65.0",
+          "Microsoft.Identity.Client": "4.66.1",
           "System.Security.Cryptography.ProtectedData": "4.5.0"
         }
       },
@@ -1721,35 +1720,35 @@
       },
       "Swashbuckle.AspNetCore": {
         "type": "Transitive",
-        "resolved": "6.8.1",
-        "contentHash": "JN6ccH37QKtNOwBrvSxc+jBYIB+cw6RlZie2IKoJhjjf6HzBH+2kPJCpxmJ5EHIqmxvq6aQG+0A8XklGx9rAxA==",
+        "resolved": "6.9.0",
+        "contentHash": "lvI+XHF21tkwXd2nDCLGJsdhdUYsY3Ax2fWUlvw81Oa6EedtnIAf5tThy8ZnPcz/9/TwsLgjgtX9ifOCIjbEPA==",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "6.0.5",
-          "Swashbuckle.AspNetCore.Swagger": "6.8.1",
-          "Swashbuckle.AspNetCore.SwaggerGen": "6.8.1",
-          "Swashbuckle.AspNetCore.SwaggerUI": "6.8.1"
+          "Swashbuckle.AspNetCore.Swagger": "6.9.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "6.9.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "6.9.0"
         }
       },
       "Swashbuckle.AspNetCore.Swagger": {
         "type": "Transitive",
-        "resolved": "6.8.1",
-        "contentHash": "eOkdM4bsWBU5Ty3kWbyq5O9L+05kZT0vOdGh4a92vIb/LLQGQTPLRHXuJdnUBNIPNC8XfKWfSbtRfqzI6nnbqw==",
+        "resolved": "6.9.0",
+        "contentHash": "P316kpxx5DnDvJwNWW8iTAXkh9DVenAxFGe9v4OUS0gil+vitH7F1feXhCtVeHN/616EFNTMh4pV2lcr9kkw/w==",
         "dependencies": {
           "Microsoft.OpenApi": "1.6.14"
         }
       },
       "Swashbuckle.AspNetCore.SwaggerGen": {
         "type": "Transitive",
-        "resolved": "6.8.1",
-        "contentHash": "TjBPxsN0HeJzxEXZYeDXBNNMSyhg+TYXtkbwX+Cn8GH/y5ZeoB/chw0p71kRo5tR2sNshbKwL24T6f9pTF9PHg==",
+        "resolved": "6.9.0",
+        "contentHash": "FjeMR3fBzwVc5plfYjoHw9ptf8SOWMupvO9X35J5EgzT3L9dRqSxa+cBKzL8PwCyemY0xNrggQSB5+MFWx1axg==",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "6.8.1"
+          "Swashbuckle.AspNetCore.Swagger": "6.9.0"
         }
       },
       "Swashbuckle.AspNetCore.SwaggerUI": {
         "type": "Transitive",
-        "resolved": "6.8.1",
-        "contentHash": "lpEszYJ7vZaTTE5Dp8MrsbSHrgDfjhDMjzW1qOA1Xs1Dnj3ZRBJAcPZUTsa5Bva+nLaw91JJ8OI8FkSg8hhIyA=="
+        "resolved": "6.9.0",
+        "contentHash": "0OxlWBFLl2gUESZX/K7QCTz9KctKy0VxHTvLIBcyWGD4z/fv5MCMW02qzYGcReLJr4yBnNDRzApKtLh6oBpe9A=="
       },
       "System.AppContext": {
         "type": "Transitive",
@@ -1773,11 +1772,11 @@
       },
       "System.ClientModel": {
         "type": "Transitive",
-        "resolved": "1.0.0",
-        "contentHash": "I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
+        "resolved": "1.1.0",
+        "contentHash": "UocOlCkxLZrG2CKMAAImPcldJTxeesHnHGHwhJ0pNlZEvEXcWKuQvVOER2/NiOkJGRJk978SNdw3j6/7O9H1lg==",
         "dependencies": {
           "System.Memory.Data": "1.0.2",
-          "System.Text.Json": "4.7.2"
+          "System.Text.Json": "6.0.9"
         }
       },
       "System.Collections": {
@@ -2105,16 +2104,15 @@
       },
       "System.Memory": {
         "type": "Transitive",
-        "resolved": "4.5.4",
-        "contentHash": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw=="
+        "resolved": "4.5.5",
+        "contentHash": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw=="
       },
       "System.Memory.Data": {
         "type": "Transitive",
-        "resolved": "1.0.2",
-        "contentHash": "JGkzeqgBsiZwKJZ1IxPNsDFZDhUvuEdX8L8BDC8N3KOj+6zMcNU28CNN59TpZE/VJYy9cP+5M+sbxtWJx3/xtw==",
+        "resolved": "6.0.0",
+        "contentHash": "ntFHArH3I4Lpjf5m4DCXQHJuGwWPNVJPaAvM95Jy/u+2Yzt2ryiyIN04LAogkjP9DeRcEOiviAjQotfmPq/FrQ==",
         "dependencies": {
-          "System.Text.Encodings.Web": "4.7.2",
-          "System.Text.Json": "4.6.0"
+          "System.Text.Json": "6.0.0"
         }
       },
       "System.Net.Http": {
@@ -2705,38 +2703,38 @@
       },
       "Umbraco.Cms.Api.Common": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "O9OsfDDJjLQVEqkwlDWgjqAYxlIydJAjlWkDuB9J0hBFHLF9OFBa2iJZ3WhMQM08FNzhVhX/q89mO1dYS5kRyw==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "ajwwhqR69JLK5K4qYqqfy1oD9oY5ONrgTspaPLAa6CXgKlgvkrF5SZhjX9U6W5vFNuu7hlGVTHOxRCZ2h/o5nQ==",
         "dependencies": {
           "Asp.Versioning.Mvc": "8.1.0",
           "Asp.Versioning.Mvc.ApiExplorer": "8.1.0",
           "Microsoft.IdentityModel.JsonWebTokens": "8.1.2",
           "OpenIddict.Abstractions": "6.0.0-preview1.24504.78",
           "OpenIddict.AspNetCore": "6.0.0-preview1.24504.78",
-          "Swashbuckle.AspNetCore": "6.8.1",
-          "Umbraco.Cms.Core": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Web.Common": "[15.0.0-rc2, 16.0.0)"
+          "Swashbuckle.AspNetCore": "6.9.0",
+          "Umbraco.Cms.Core": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Web.Common": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Api.Delivery": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "UZul55zjY5FaH2PWD6vj4Fq/OejJEHtm6qNFoZFFWABgxz1YE5635IE0C2+/mMmIQ7fvvfdkY7AHhmX98Cy8tQ==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "ux37/LjlyUS9ZoGn3/vljR1bVFXJgWxF7J4W3ziyMXe67INtAv2KdPUgJVBj1Ve0XmsrJZSdTF0P52HY93mV+g==",
         "dependencies": {
-          "Umbraco.Cms.Api.Common": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Web.Common": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Api.Common": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Web.Common": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Api.Management": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "z59gb/wzUmkxAah9gDQJAuJ2Xa+G7+zjaxPTqsUijRAn3Tn+7NqVGA9RDw5YIdaQgL5HAURv37EX7seIUlXkcg==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "04+Nlg61C7HUTj7V7g8+Znx/AnOZgfj1Gw/Zw9FcTCyV6tFfQSDk90jLFufZOVuqBfbUy3qg4MdjmJxWXE7DGA==",
         "dependencies": {
           "JsonPatch.Net": "3.1.1",
-          "Swashbuckle.AspNetCore": "6.8.1",
-          "Umbraco.Cms.Api.Common": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Infrastructure": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.PublishedCache.HybridCache": "[15.0.0-rc2, 16.0.0)"
+          "Swashbuckle.AspNetCore": "6.9.0",
+          "Umbraco.Cms.Api.Common": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Infrastructure": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.PublishedCache.HybridCache": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Core": {
@@ -2770,12 +2768,12 @@
       },
       "Umbraco.Cms.Imaging.ImageSharp": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "UcXTKI0x87UJ+jDZhC8GEmkXNRxazcQa/w6Ot6FLhWFTjmPOIgmm11WxKIFVhiq4JIxIl0YzfH9OLXnBqlHiDQ==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "zK/9i1G1UBbryX+GUnseFFCw+TIkHlYqjEAhmsXwgoVlo5JtgjD/NRc7CfKGz/CuGdwRijGZqArngxhgZnen9g==",
         "dependencies": {
           "SixLabors.ImageSharp": "3.1.5",
           "SixLabors.ImageSharp.Web": "3.1.3",
-          "Umbraco.Cms.Web.Common": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Web.Common": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Infrastructure": {
@@ -2814,61 +2812,61 @@
       },
       "Umbraco.Cms.Persistence.EFCore": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "JpBJqglG5l8rB4Zaz/y40CtUoNPRCona5/nhCDYWF6uY/2ycBYWoQsoNv6aCecfkg119/VLIers/mmGLKuDT5A==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "XoMuWZSUh43VmVdhLliwd43gpWDW63nssr8gSQNwQForPz6K0J5zd4RQKDYFb28Y/uG1snD83xS/7mUhxwePZw==",
         "dependencies": {
-          "Azure.Identity": "1.12.1",
+          "Azure.Identity": "1.13.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-rc.2.24474.1",
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0-rc.2.24474.1",
           "OpenIddict.EntityFrameworkCore": "6.0.0-preview1.24504.78",
           "System.Runtime.Caching": "9.0.0-rc.2.24473.5",
           "System.Text.Encodings.Web": "9.0.0-rc.2.24473.5",
-          "Umbraco.Cms.Core": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Infrastructure": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Core": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Infrastructure": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Persistence.EFCore.Sqlite": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "aSZPB8AeTB7hqm+vNT4O6OFxi2Ox8+xQeyBAun1rMh+gOSnht3pQsxptSKVRKlmD8bMw7lyiFuo5sYDYITDRpQ==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "l+tq2U4ti2B7P1pI+9Hgm0fsuOjzhiZMqNLBHZR5XqZMdKYBe4hXsPt6/Y7GkORm+zVk2KfUZxEuTOyOWcx3XA==",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "9.0.0-rc.2.24474.1",
-          "Umbraco.Cms.Persistence.EFCore": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Persistence.EFCore": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Persistence.EFCore.SqlServer": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "CzSmgi0YimrEkY1nFOmzdCYWPUYfp6Ig0DTXbDrnaRLhAeYBJud7RnYEeOq2EYPIs13H3+3Z6O0222WvmW0ssA==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "xRESWg5puA73MWiBpW1pUHsljsKy7CUxYuotVORL1xYLegMRWBrgw4X7CMbnS2yoCZeA0Mn1r1z56E3cm9ttyQ==",
         "dependencies": {
-          "Azure.Identity": "1.12.1",
+          "Azure.Identity": "1.13.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0-rc.2.24474.1",
           "Microsoft.IdentityModel.JsonWebTokens": "8.1.2",
           "System.Runtime.Caching": "9.0.0-rc.2.24473.5",
-          "Umbraco.Cms.Persistence.EFCore": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Persistence.EFCore": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Persistence.Sqlite": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "IbsFqLZ7oOBTvzxlch7IkcYAK1YkB7895Y81Q/+GZLd/NSX+/YCFgqk4BCUbMpx+0nv9o3VA7JutZvM2O+nLFA==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "5iFjh8jrpj5QsIdIOS/+txKHVdE/B1QWKHPSEHsAoUK+nYx/X37+UOmSZ5IKwsuh43xZTKkZ7wefkpHxjWHrPw==",
         "dependencies": {
           "Microsoft.Data.Sqlite": "9.0.0-rc.2.24474.1",
-          "Umbraco.Cms.Infrastructure": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Infrastructure": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Persistence.SqlServer": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "Sv7yklGqR5hG1TM03vtXzMarfD5A2JpMv4KGBOFQmDDuoWQUpn0ISbMtNGn35QL/b4z85C++rqeljWnSQt+QPQ==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "QgtNSqiCZPvuPOSGsAtKQjbVtowIEYUXykB9TeseSd4IovxggdeXhOr0b6ZnL5RzN+VR0SN2B0NCHG9Mj8IJYA==",
         "dependencies": {
-          "Azure.Identity": "1.12.1",
+          "Azure.Identity": "1.13.1",
           "Microsoft.Data.SqlClient": "5.2.2",
           "Microsoft.IdentityModel.JsonWebTokens": "8.1.2",
           "NPoco.SqlServer": "5.7.1",
           "System.Runtime.Caching": "9.0.0-rc.2.24473.5",
           "System.Text.Encodings.Web": "9.0.0-rc.2.24473.5",
-          "Umbraco.Cms.Infrastructure": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Infrastructure": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.PublishedCache.HybridCache": {
@@ -2885,21 +2883,21 @@
       },
       "Umbraco.Cms.StaticAssets": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "QQK41UB8sbtRNCe4+IiANKQkaAR2eJwJpWc1GEBaCXPOZAC3ythhKjPkB2OYWYyFfdTDo3rV4Tj9e8lGeYC22A==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "8/qQBXeFtH8/dNvz2YOkL1Ilf2M8FCd4BYK3X7YC9XeFyRJzBBJugAGkWXiYgaGa8fNgUaJ9SGovZebFOOP07Q==",
         "dependencies": {
-          "Umbraco.Cms.Api.Management": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Web.Website": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Api.Management": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Web.Website": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Targets": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "reDvg6z3LP+dfaP6llvKaP1Cqw01Jm5qIIbk0dfQnSSGvseYeVjVujlJEXMQxg1qbJ0xst0xbSaPX3rs4KCfsw==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "yp29wOp1GOjMcpbPOXXpqt/Ddb69adOIhOTYq16c9CLDs2YfRB8tZz8C8YCuuRNslm7z5c12LHXF6yMMvreb4g==",
         "dependencies": {
-          "Umbraco.Cms.Api.Delivery": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.Api.Management": "[15.0.0-rc2, 16.0.0)",
-          "Umbraco.Cms.StaticAssets": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Api.Delivery": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.Api.Management": "[15.0.0-rc3, 16.0.0)",
+          "Umbraco.Cms.StaticAssets": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "Umbraco.Cms.Web.Common": {
@@ -2923,10 +2921,10 @@
       },
       "Umbraco.Cms.Web.Website": {
         "type": "Transitive",
-        "resolved": "15.0.0-rc2",
-        "contentHash": "6TSSpAaK/w1W1qjAMja7B+hujp8CtDcjvOjey65jCbniuqgY9q8fd0GgUSSQu1NdL9GXWqBByVNAYJiVoMIXdA==",
+        "resolved": "15.0.0-rc3",
+        "contentHash": "SydbaQGMVkssUGmO1FFCiHEnxAb3OLszwi91IHQf6u/eHM1VIRVYfJwG8CiCKi2hSs0yhHB2zfmsd6UQ/vHDXQ==",
         "dependencies": {
-          "Umbraco.Cms.Web.Common": "[15.0.0-rc2, 16.0.0)"
+          "Umbraco.Cms.Web.Common": "[15.0.0-rc3, 16.0.0)"
         }
       },
       "jcdcdev.umbraco.core": {
