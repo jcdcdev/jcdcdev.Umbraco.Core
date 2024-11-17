@@ -7,20 +7,16 @@ using Umbraco.Cms.Web.Common.Controllers;
 
 namespace jcdcdev.Umbraco.Core.Web;
 
-public abstract class RenderController<T> : RenderController where T : class, IPublishedContent
+public abstract class RenderController<T>(
+    ILogger<RenderController> logger,
+    ICompositeViewEngine compositeViewEngine,
+    IUmbracoContextAccessor umbracoContextAccessor,
+    UmbracoHelper helper)
+    : RenderController(logger, compositeViewEngine, umbracoContextAccessor)
+    where T : class, IPublishedContent
 {
-    protected RenderController(
-        ILogger<RenderController> logger,
-        ICompositeViewEngine compositeViewEngine,
-        IUmbracoContextAccessor umbracoContextAccessor,
-        UmbracoHelper helper) : base(logger, compositeViewEngine, umbracoContextAccessor)
-    {
-        Helper = helper;
-        UmbracoContextAccessor = umbracoContextAccessor;
-    }
-
-    protected UmbracoHelper Helper { get; }
-    public IUmbracoContextAccessor UmbracoContextAccessor { get; }
+    protected UmbracoHelper Helper { get; } = helper;
+    public IUmbracoContextAccessor UmbracoContextAccessor { get; } = umbracoContextAccessor;
 
     protected override T CurrentPage => base.CurrentPage as T ?? throw new InvalidOperationException();
 }

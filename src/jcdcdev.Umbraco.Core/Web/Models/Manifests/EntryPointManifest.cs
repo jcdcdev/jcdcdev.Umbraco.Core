@@ -1,9 +1,6 @@
 namespace jcdcdev.Umbraco.Core.Web.Models.Manifests;
 
-public class EntryPointManifest : IManifest
+[Obsolete("Use BackofficeEntryPointManifest instead")]
+public class EntryPointManifest : BackofficeEntryPointManifest
 {
-    public required string Name { get; set; }
-    public required string Alias { get; set; }
-    public required string Js { get; set; }
-    public string Type => "entryPoint";
 }
