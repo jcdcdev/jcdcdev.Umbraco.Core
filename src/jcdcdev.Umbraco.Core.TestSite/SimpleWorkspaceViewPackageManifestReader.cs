@@ -3,9 +3,9 @@ using jcdcdev.Umbraco.Core.Web.Models.Manifests;
 using Umbraco.Cms.Core.Manifest;
 using Umbraco.Cms.Infrastructure.Manifest;
 
-namespace TestSite;
+namespace jcdcdev.Umbraco.Core.TestSite;
 
-public class SimpleWorkspaceViewPackageManifestReader() : IPackageManifestReader
+public class SimpleWorkspaceViewPackageManifestReader : IPackageManifestReader
 {
     public async Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync()
     {
