@@ -1,4 +1,3 @@
-using Umbraco.Cms.Core;
 using Umbraco.Cms.Core.Models;
 using Umbraco.Extensions;
 
@@ -8,17 +7,17 @@ public static class MediaTypeExtensions
 {
     private static readonly string[] MediaTypes =
     [
-        Constants.Conventions.MediaTypes.File,
-        Constants.Conventions.MediaTypes.Folder,
-        Constants.Conventions.MediaTypes.Image,
-        Constants.Conventions.MediaTypes.Video,
-        Constants.Conventions.MediaTypes.Audio,
-        Constants.Conventions.MediaTypes.Article,
-        Constants.Conventions.MediaTypes.VectorGraphics,
-        Constants.Conventions.MediaTypes.VideoAlias,
-        Constants.Conventions.MediaTypes.AudioAlias,
-        Constants.Conventions.MediaTypes.ArticleAlias,
-        Constants.Conventions.MediaTypes.VectorGraphicsAlias
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.File,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.Folder,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.Image,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.Video,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.Audio,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.Article,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.VectorGraphics,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.VideoAlias,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.AudioAlias,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.ArticleAlias,
+        global::Umbraco.Cms.Core.Constants.Conventions.MediaTypes.VectorGraphicsAlias
     ];
 
     public static bool IsInternal(this IMediaType mediaType) => MediaTypes.InvariantContains(mediaType.Alias);
