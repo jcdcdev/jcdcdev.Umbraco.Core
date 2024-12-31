@@ -15,8 +15,8 @@ public class ConditionManifest : IConditionManifest
     }
 
     public static ConditionManifest Create(string alias, string match) => new(alias, match);
-    public static ConditionManifest Create(string alias, string[] match) => new(alias, match.Select(x => (object)x));
     public static ConditionManifest Create(string alias, bool match) => new(alias, match);
+    public static ConditionManifest Create(string alias, string[] oneOf) => new(alias, (object[])oneOf);
 
     /// <summary>
     /// Requires the current Section Alias to match the one specified.

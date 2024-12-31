@@ -1,6 +1,7 @@
 using jcdcdev.Umbraco.Core.Extensions;
 using jcdcdev.Umbraco.Core.Web.Models.Manifests;
 using Umbraco.Cms.Core.Manifest;
+using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Infrastructure.Manifest;
 using Umbraco.Cms.Web.Common.PublishedModels;
 
@@ -53,7 +54,7 @@ public class SimpleWorkspaceViewPackageManifestReader : IPackageManifestReader
             Conditions =
             [
                 ConditionManifest.EntityIsTrashed(),
-                ConditionManifest.WorkspaceContentTypeAlias(Home.ModelTypeAlias)
+                ConditionManifest.WorkspaceContentTypeAlias([Home.ModelTypeAlias, BasePage.ModelTypeAlias])
             ]
         };
 
