@@ -7,7 +7,7 @@ public class WorkspaceViewManifest : IManifest
     public string? Js { get; set; }
     public int Weight { get; set; }
     public MetaManifest? Meta { get; set; }
-    public ConditionManifest[]? Conditions { get; set; }
+    public IConditionManifest[]? Conditions { get; set; }
     public string? Element { get; set; }
     public string? ElementName { get; set; }
     public string Type => "workspaceView";
