@@ -8,7 +8,14 @@ public class ConditionManifest : IConditionManifest
         Match = match;
     }
 
+    private ConditionManifest(string alias, object[] oneOf)
+    {
+        Alias = alias;
+        OneOf = oneOf;
+    }
+
     public static ConditionManifest Create(string alias, string match) => new(alias, match);
+    public static ConditionManifest Create(string alias, string[] match) => new(alias, match.Select(x => (object)x));
     public static ConditionManifest Create(string alias, bool match) => new(alias, match);
 
     /// <summary>
@@ -21,10 +28,27 @@ public class ConditionManifest : IConditionManifest
     }
 
     /// <summary>
+    /// Requires the current Section Alias to match the one specified.
+    /// </summary>
+    /// <param name="sectionAliases"> Section aliases (e.g "Umb.Section.Content")</param>
+    // TODO Add when Umbraco supports oneOf in Section Condition
+    // public static ConditionManifest SectionAlias(string[] sectionAliases)
+    // {
+    //     return Create(Constants.Conditions.SectionAlias, sectionAliases);
+    // }
+
+    /// <summary>
     /// Requires the current Menu Alias to match the one specified.
     /// </summary>
     /// <param name="menuAlias">Menu alias (e.g "Umb.Menu.Content")</param>
     public static ConditionManifest MenuAlias(string menuAlias) => Create(Constants.Conditions.MenuAlias, menuAlias);
+
+    /// <summary>
+    /// Requires the current Menu Alias to match any specified.
+    /// </summary>
+    /// <param name="menuAliases">Menu aliases (e.g "Umb.Menu.Content")</param>
+    // TODO Add when Umbraco supports oneOf in Menu Condition
+    // public static ConditionManifest MenuAlias(string[] menuAliases) => Create(Constants.Conditions.MenuAlias, menuAliases);
 
     /// <summary>
     /// Requires the current Workspace Alias to match the one specified.
@@ -36,6 +60,16 @@ public class ConditionManifest : IConditionManifest
     }
 
     /// <summary>
+    /// Requires the current Workspace Alias to match any specified.
+    /// </summary>
+    /// <param name="workspaceAliases">Workspace aliases (e.g "Umb.Workspace.Document")</param>
+    // TODO Add when Umbraco supports oneOf in Workspace Condition
+    // public static ConditionManifest WorkspaceAlias(string[] workspaceAliases)
+    // {
+    //     return Create(Constants.Conditions.WorkspaceAlias, workspaceAliases);
+    // }
+
+    /// <summary>
     /// Requires the current workspace to work on the given Entity Type.
     /// </summary>
     /// <param name="entityType">Entity type (e.g "document", "block", "user")</param>
@@ -45,12 +79,31 @@ public class ConditionManifest : IConditionManifest
     }
 
     /// <summary>
+    /// Requires the current workspace to work on any of the given Entity Types.
+    /// </summary>
+    /// <param name="entityTypes">Entity types (e.g "document", "block", "user")</param>
+    // TODO Add when Umbraco supports oneOf in Workspace Entity Type Condition
+    // public static ConditionManifest WorkspaceEntityType(string[] entityTypes)
+    // {
+    //     return Create(Constants.Conditions.WorkspaceEntityType, entityTypes);
+    // }
+
+    /// <summary>
     /// Requires the current workspace to be based on a Content Type which Alias matches the one specified.
     /// </summary>
-    /// <param name="contentTypeAlias">Content Type alias (e.g "Umb.ContentType.Article")</param>
+    /// <param name="contentTypeAlias">Content Type alias (e.g "Article")</param>
     public static ConditionManifest WorkspaceContentTypeAlias(string contentTypeAlias)
     {
         return Create(Constants.Conditions.WorkspaceContentTypeAlias, contentTypeAlias);
+    }
+
+    /// <summary>
+    /// Requires the current workspace to be based on a Content Type which Alias matches the one specified.
+    /// </summary>
+    /// <param name="contentTypeAliases">Content Type aliases (e.g "Article")</param>
+    public static ConditionManifest WorkspaceContentTypeAlias(string[] contentTypeAliases)
+    {
+        return Create(Constants.Conditions.WorkspaceContentTypeAlias, contentTypeAliases);
     }
 
     /// <summary>
@@ -111,13 +164,14 @@ public class ConditionManifest : IConditionManifest
         return Create(Constants.Conditions.UserPermissionDocument, documentPermission);
     }
 
-
     public string Alias { get; }
-    public object Match { get; }
+    public object? Match { get; }
+    public object[]? OneOf { get; }
 }
 
 public interface IConditionManifest
 {
     public string Alias { get; }
-    public object Match { get; }
+    public object? Match { get; }
+    public object[]? OneOf { get; }
 }
