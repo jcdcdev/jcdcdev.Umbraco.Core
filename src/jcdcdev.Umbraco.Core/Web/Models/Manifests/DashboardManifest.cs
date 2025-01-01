@@ -8,7 +8,7 @@ public class DashboardManifest : IManifest
     public string? Element { get; set; }
     public int Weight { get; set; }
     public MetaManifest? Meta { get; set; }
-    public ConditionManifest[]? Conditions { get; set; }
+    public IConditionManifest[]? Conditions { get; set; }
     public string Type => "dashboard";
 
     public class MetaManifest

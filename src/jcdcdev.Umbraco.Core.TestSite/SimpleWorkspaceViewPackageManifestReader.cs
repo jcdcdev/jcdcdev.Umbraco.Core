@@ -1,7 +1,9 @@
 using jcdcdev.Umbraco.Core.Extensions;
 using jcdcdev.Umbraco.Core.Web.Models.Manifests;
 using Umbraco.Cms.Core.Manifest;
+using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Infrastructure.Manifest;
+using Umbraco.Cms.Web.Common.PublishedModels;
 
 namespace jcdcdev.Umbraco.Core.TestSite;
 
@@ -33,11 +35,26 @@ public class SimpleWorkspaceViewPackageManifestReader : IPackageManifestReader
             },
             Conditions =
             [
-                new ConditionManifest
-                {
-                    Alias = "Umb.Condition.WorkspaceAlias",
-                    Match = "Umb.Workspace.Document"
-                }
+                ConditionManifest.WorkspaceAlias(Constants.Workspaces.Document)
+            ]
+        };
+
+        var newEntityWorkspaceViewManifest = new WorkspaceViewManifest
+        {
+            Alias = "trashed-entity-workspace-view",
+            Name = "Trashed Entity Workspace View",
+            ElementName = "uui-icon",
+            Weight = 10,
+            Meta = new WorkspaceViewManifest.MetaManifest
+            {
+                Label = "Trashed Entity Workspace View",
+                Pathname = "trashed-entity-workspace-view",
+                Icon = "favorite"
+            },
+            Conditions =
+            [
+                ConditionManifest.EntityIsTrashed(),
+                ConditionManifest.WorkspaceContentTypeAlias([Home.ModelTypeAlias, BasePage.ModelTypeAlias])
             ]
         };
 
@@ -54,16 +71,13 @@ public class SimpleWorkspaceViewPackageManifestReader : IPackageManifestReader
             },
             Conditions =
             [
-                new ConditionManifest
-                {
-                    Alias = "Umb.Condition.SectionAlias",
-                    Match = "Umb.Section.Content"
-                }
+                ConditionManifest.SectionAlias(Constants.Sections.Content)
             ]
         };
 
         extensions.Add(dashboardManifest);
         extensions.Add(workspaceViewManifest);
+        extensions.Add(newEntityWorkspaceViewManifest);
         packageManifest.Extensions = extensions.OfType<object>().ToArray();
         return [packageManifest];
     }
