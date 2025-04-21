@@ -356,3 +356,4 @@ MigrationBackup/
 src/.idea
 *.sqlite.db*
 .idea/
+/src/*.TestSite/umbraco/Data/TEMP
