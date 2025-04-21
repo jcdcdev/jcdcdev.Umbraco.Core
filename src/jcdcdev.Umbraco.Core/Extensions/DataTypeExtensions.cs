@@ -82,7 +82,9 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.EmailAddress,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.NestedContent,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.MultiUrlPicker,
+#pragma warning disable CS0618 // Type or member is obsolete
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.TinyMce,
+#pragma warning restore CS0618 // Type or member is obsolete
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.RichText,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainString,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainJson,
