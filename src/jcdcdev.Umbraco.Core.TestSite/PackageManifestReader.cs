@@ -1,21 +1,21 @@
+using System.Reflection;
 using jcdcdev.Umbraco.Core.Extensions;
 using jcdcdev.Umbraco.Core.Web.Models.Manifests;
 using Umbraco.Cms.Core.Manifest;
-using Umbraco.Cms.Core.Models;
 using Umbraco.Cms.Infrastructure.Manifest;
 using Umbraco.Cms.Web.Common.PublishedModels;
 
 namespace jcdcdev.Umbraco.Core.TestSite;
 
-public class SimpleWorkspaceViewPackageManifestReader : IPackageManifestReader
+public class PackageManifestReader : IPackageManifestReader
 {
-    public async Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync()
+    public Task<IEnumerable<PackageManifest>> ReadPackageManifestsAsync()
     {
         var extensions = new List<IManifest>();
         var packageManifest = new PackageManifest
         {
             Name = "jcdcdev.Umbraco.Core",
-            Version = EnvironmentExtensions.CurrentAssemblyVersion().ToSemVer()?.ToString() ?? "0.1.0",
+            Version = Assembly.GetAssembly(typeof(PackageManifestReader))?.GetName().Version?.ToSemVer()?.ToString() ?? "0.1.0",
             AllowPublicAccess = false,
             AllowTelemetry = false,
             Extensions = []
@@ -79,6 +79,6 @@ public class SimpleWorkspaceViewPackageManifestReader : IPackageManifestReader
         extensions.Add(workspaceViewManifest);
         extensions.Add(newEntityWorkspaceViewManifest);
         packageManifest.Extensions = extensions.OfType<object>().ToArray();
-        return [packageManifest];
+        return Task.FromResult<IEnumerable<PackageManifest>>([packageManifest]);
     }
 }
