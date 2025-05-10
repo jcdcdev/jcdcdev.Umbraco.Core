@@ -9,7 +9,6 @@ public static class DataTypeExtensions
 {
     private static readonly Guid[] Guids =
     [
-        // Legacy editors
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.ContentPickerGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.MemberPickerGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.MediaPicker3Guid,
@@ -82,9 +81,6 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.EmailAddress,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.NestedContent,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.MultiUrlPicker,
-#pragma warning disable CS0618 // Type or member is obsolete
-        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.TinyMce,
-#pragma warning restore CS0618 // Type or member is obsolete
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.RichText,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainString,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainJson,
