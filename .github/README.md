@@ -7,13 +7,10 @@
 
 Core functionality used by my Umbraco CMS packages and projects.
 
-> [!IMPORTANT]
-> Version 10 will only receive security updates and no new features.
+> [!WARNING]
+> Version 10 is no longer supported and is End of Life (EOL).
 
 > Please review the [security policy](https://github.com/jcdcdev/jcdcdev.Umbraco.Core?tab=security-ov-file#supported-versions) for more information.
-
-
-
 
 ## Contributing
 
