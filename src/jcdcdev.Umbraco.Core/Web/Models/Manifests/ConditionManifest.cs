@@ -31,11 +31,10 @@ public class ConditionManifest : IConditionManifest
     /// Requires the current Section Alias to match the one specified.
     /// </summary>
     /// <param name="sectionAliases"> Section aliases (e.g "Umb.Section.Content")</param>
-    // TODO Add when Umbraco supports oneOf in Section Condition
-    // public static ConditionManifest SectionAlias(string[] sectionAliases)
-    // {
-    //     return Create(Constants.Conditions.SectionAlias, sectionAliases);
-    // }
+    public static ConditionManifest SectionAlias(string[] sectionAliases)
+    {
+        return Create(Constants.Conditions.SectionAlias, sectionAliases);
+    }
 
     /// <summary>
     /// Requires the current Menu Alias to match the one specified.
