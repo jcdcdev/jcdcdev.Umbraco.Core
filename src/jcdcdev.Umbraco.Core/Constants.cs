@@ -2,6 +2,22 @@ namespace jcdcdev.Umbraco.Core;
 
 public static class Constants
 {
+    public class Menus
+    {
+        public const string Content = "Umb.Menu.Content";
+        public const string Help = "Umb.Menu.Help";
+        public const string Media = "Umb.Menu.Media";
+        public const string MemberManagement = "Umb.Menu.MemberManagement";
+        public const string StructureSettings = "Umb.Menu.StructureSettings";
+        public const string AdvancedSettings = "Umb.Menu.AdvancedSettings";
+        public const string Templating = "Umb.Menu.Templating";
+        public const string Translation = "Umb.Menu.Translation";
+        public const string UserManagement = "Umb.Menu.UserManagement";
+
+        // ReSharper disable once InconsistentNaming
+        public const string uSync = "usync.menu";
+    }
+
     public class Conditions
     {
         public const string BlockEntryShowContentEdit = "Umb.Condition.BlockEntryShowContentEdit";
