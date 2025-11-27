@@ -7,9 +7,6 @@
 
 Core functionality used by my Umbraco CMS packages and projects.
 
-> [!NOTE]
-> Version 17 is not released yet.
-
 
 
 
