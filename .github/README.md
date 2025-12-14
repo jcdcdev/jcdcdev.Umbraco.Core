@@ -7,6 +7,11 @@
 
 Core functionality used by my Umbraco CMS packages and projects.
 
+> [!IMPORTANT]
+> Version 13 will only receive security updates and no new features.
+
+> Please review the [security policy](https://github.com/jcdcdev/jcdcdev.Umbraco.Core?tab=security-ov-file#supported-versions) for more information.
+
 
 
 
