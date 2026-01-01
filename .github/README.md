@@ -7,6 +7,14 @@
 
 Core functionality used by my Umbraco CMS packages and projects.
 
+## Installation
+
+### Install Package
+
+```csharp
+dotnet add package jcdcdev.Umbraco.Core 
+```
+
 ## Contributing
 
 Contributions to this package are most welcome! Please visit the [Contributing](https://github.com/jcdcdev/jcdcdev.Umbraco.Core/contribute) page.
