@@ -12,10 +12,6 @@ Core functionality used by my Umbraco CMS packages and projects.
 
 > Please review the [security policy](https://github.com/jcdcdev/jcdcdev.Umbraco.Core?tab=security-ov-file#supported-versions) for more information.
 
-
-
-
-
 ## Contributing
 
 Contributions to this package are most welcome! Please visit the [Contributing](https://github.com/jcdcdev/jcdcdev.Umbraco.Core/contribute) page.
