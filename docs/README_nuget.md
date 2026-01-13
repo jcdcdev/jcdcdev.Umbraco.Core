@@ -12,7 +12,7 @@ Core functionality used by my Umbraco CMS packages and projects.
 
 ### Install Package
 
-```csharp
+```powershell
 dotnet add package jcdcdev.Umbraco.Core 
 ```
 
