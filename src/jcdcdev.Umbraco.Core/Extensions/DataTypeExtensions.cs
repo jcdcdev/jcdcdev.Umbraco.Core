@@ -1,5 +1,3 @@
-
-
 using Umbraco.Cms.Core.Models;
 using Umbraco.Extensions;
 
@@ -22,6 +20,7 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.ListViewContentGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.ListViewMediaGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.DatePickerWithTimeGuid,
+        global::Umbraco.Cms.Core.Constants.DataTypes.Guids.DateTimePickerWithTimeZoneGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.ApprovedColorGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.DropdownMultipleGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.RadioboxGuid,
@@ -43,20 +42,28 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelBigIntGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelDateTimeGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelTimeGuid,
-        global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelDecimalGuid
+        global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelDecimalGuid,
+        new(global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelBytes),
+        new(global::Umbraco.Cms.Core.Constants.DataTypes.Guids.LabelPixels),
     ];
 
     private static readonly string[] Aliases =
     [
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.BlockList,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.SingleBlock,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.BlockGrid,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.CheckBoxList,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.ColorPicker,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.ColorPickerEyeDropper,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.ContentPicker,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.DateTime,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.DateTimeUnspecified,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.DateTimeWithTimeZone,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.DateOnly,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.EntityDataPicker,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.TimeOnly,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.DropDownListFlexible,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.Grid,
-        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.BlockGrid,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.ImageCropper,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.Integer,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.Decimal,
@@ -74,6 +81,7 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.Tags,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.TextBox,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.TextArea,
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.RichText,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.Boolean,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.MarkdownEditor,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.UserPicker,
@@ -81,13 +89,12 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.EmailAddress,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.NestedContent,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.MultiUrlPicker,
-        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.RichText,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainString,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainJson,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainDecimal,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainInteger,
         global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainDateTime,
-        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainTime
+        global::Umbraco.Cms.Core.Constants.PropertyEditors.Aliases.PlainTime,
     ];
 
     public static bool IsUmbracoEditor(this IDataType dataType) => Aliases.InvariantContains(dataType.EditorAlias);
