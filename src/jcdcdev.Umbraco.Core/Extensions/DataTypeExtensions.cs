@@ -14,7 +14,6 @@ public static class DataTypeExtensions
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.MediaPicker3SingleImageGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.MediaPicker3MultipleImagesGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.RelatedLinksGuid,
-        global::Umbraco.Cms.Core.Constants.DataTypes.Guids.MemberGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.ImageCropperGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.TagsGuid,
         global::Umbraco.Cms.Core.Constants.DataTypes.Guids.ListViewContentGuid,
