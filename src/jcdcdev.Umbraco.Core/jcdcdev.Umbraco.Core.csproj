@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Razor">
     <PropertyGroup>
-        <TargetFramework>net10.0</TargetFramework>
+        <TargetFramework>net11.0</TargetFramework>
         <LangVersion>12</LangVersion>
         <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
         <ImplicitUsings>enable</ImplicitUsings>
@@ -23,11 +23,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Umbraco.Cms.Web.Common" Version="[18.0.0,19.0.0)" />
+        <PackageReference Include="Umbraco.Cms.Web.Common" Version="19.0.0-rc1" />
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
-        <Major>18</Major>
+        <Major>19</Major>
         <Minor>$([System.DateTime]::UtcNow.ToString(`yyyy`))</Minor>
         <Patch>$([System.DateTime]::UtcNow.ToString(`MMdd`).TrimStart(`0`))</Patch>
         <Suffix>-alpha-$([System.DateTime]::UtcNow.ToString(`Hmm-ss`).TrimStart(`.`))</Suffix>
